@@ -12,7 +12,7 @@ export const TemplateRenderer = ({ data }) => {
   };
 
   return (
-    <div id="resume-preview" className={${themes[template] || themes.Classic} max-w-4xl mx-auto shadow-lg min-h-[11in]}>
+    <div id="resume-preview" className={`${themes[template] || themes.Classic} max-w-4xl mx-auto shadow-lg min-h-[11in]`}>
       {/* Header Section */}
       <div className="flex items-center gap-6 border-b pb-4 mb-6">
         {personalInfo?.profilePic && (
@@ -71,7 +71,7 @@ export const TemplateRenderer = ({ data }) => {
             <h3 className="font-bold uppercase border-b mb-2">Education</h3>
             {education?.map((edu, i) => (
               <div key={i} className="text-xs mb-1">
-                <span className="font-bold">{req.degree}</span> from {edu.school} ({edu.year})
+                <span className="font-bold">{edu.degree}</span> from {edu.school} ({edu.year})
               </div>
             ))}
           </div>
