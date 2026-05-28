@@ -1,16 +1,25 @@
-const mongoose = require('mongoose');
-const ResumeSchema = new mongoose.Schema({
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  template: { type: String, required: true },
-  personalInfo: {
-    name: String, email: String, phone: String, about: String, profilePic: String
-  },
-  education: [{ school: String, degree: String, year: String }],
-  skills: [{ name: String, proficiency: { type: String, enum: ['low', 'medium', 'high'] } }],
-  languages: [{ name: String, read: Boolean, write: Boolean, speak: Boolean }],
-  experience: [{ company: String, role: String, duration: String, desc: String }],
-  projects: [{ title: String, technologies: String, desc: String }],
-  certifications: [String],
-  accomplishments: [String]
+const expressResume = require('express');
+const resumeRouter = expressResume.Router();
+const authMiddleware = require('../middleware/auth');
+const Resume = require('../models/Resume');
+
+resumeRouter.post('/', authMiddleware, async (req, res) => {
+  try {
+    const newResume = new Resume({ ...req.body, user: req.user.id });
+    const resume = await newResume.save();
+    res.json(resume);
+  } catch (err) {
+    res.status(500).send('Server Error');
+  }
 });
-module.exports = mongoose.model('Resume', ResumeSchema);
+
+resumeRouter.get('/:id', async (req, res) => {
+  try {
+    const resume = await Resume.findById(req.params.id);
+    if (!resume) return res.status(404).json({ msg: 'Resume not found' });
+    res.json(resume);
+  } catch (err) {
+    res.status(500).send('Server Error');
+  }
+});
+module.exports = resumeRouter;
