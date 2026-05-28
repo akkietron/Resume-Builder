@@ -33,4 +33,4 @@ To run this project locally, you will need to have [Node.js](https://nodejs.org/
 
 1. **Clone the repository**
 ```bash
-   git clone [https://github.com/akkietron/resume-builder.git](https://github.com/akkietron/resume-builder.git)
+   git clone https://github.com/akkietron/resume-builder.git
