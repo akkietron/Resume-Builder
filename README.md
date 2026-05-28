@@ -1,41 +1,36 @@
-# 📄 Resume Builder
+# 📄 JavaScript Resume Builder
 
-> A fast, dynamic, and intuitive web application to create, customize, and export professional resumes using pure Vanilla JavaScript.
-
-![Resume Builder Banner](https://via.placeholder.com/1200x400?text=Resume+Builder+Preview)
+> A lightweight, 100% JavaScript tool for programmatically generating clean and professional resumes.
 
 ---
 
 ## 🚀 Overview
 
-The Resume Builder is a lightweight, client-side web tool designed to simplify the resume creation process. Built entirely without frameworks, it allows users to input their information into a clean interface and instantly see a live preview. Once complete, the resume can be exported as a print-ready PDF.
+This Resume Builder is a pure JavaScript application designed to run outside the browser (via Node.js). It completely bypasses HTML and CSS, allowing developers to generate resumes by feeding structured data into a JavaScript script. It is perfect for developers who want to maintain their resume as code and automate their resume generation process.
 
 ---
 
 ## ✨ Features
 
-* **Live Preview:** See your resume update in real-time as you type, powered by DOM manipulation.
-* **Zero Dependencies:** Built entirely with Vanilla JavaScript for maximum performance and a minimal footprint.
-* **Customizable Sections:** Add, edit, or remove sections (Experience, Education, Projects, Skills) dynamically.
-* **PDF Export:** Download the finished resume directly from your browser.
-* **Responsive Design:** Build your resume on a desktop, tablet, or mobile device using modern CSS.
-* **Data Privacy:** All data processing and rendering happens locally in your browser.
+* **100% JavaScript:** No HTML, CSS, or complex frontend frameworks. 
+* **Data-Driven:** Keep your resume content in a clean, easily updatable JavaScript object or JSON file.
+* **Automated Generation:** Instantly compile and output your resume via the command line.
+* **Lightweight:** Minimal dependencies and rapid execution.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **HTML5:** Semantic markup for structure.
-* **CSS3:** Custom styling, Flexbox, and CSS Grid (No external CSS frameworks).
-* **Vanilla JavaScript (ES6+):** Core logic, event handling, and DOM manipulation.
-* **html2pdf.js / window.print():** For PDF generation and exporting.
+* **Language:** JavaScript (ES6+)
+* **Environment:** Node.js
+* **Output Generation:** [Note: Mention here if you are using 'fs' to write to a file, 'pdfkit' for PDFs, or just logging to the console]
 
 ---
 
 ## 💻 Installation and Setup
 
-Since this project uses plain HTML, CSS, and JavaScript, no complex build tools or package managers are required.
+To run this project locally, you will need to have [Node.js](https://nodejs.org/) installed on your machine.
 
 1. **Clone the repository**
-   ```bash
-   git clone [https://github.com/yourusername/resume-builder.git](https://github.com/yourusername/resume-builder.git)
+```bash
+   git clone [https://github.com/akkietron/resume-builder.git](https://github.com/akkietron/resume-builder.git)
